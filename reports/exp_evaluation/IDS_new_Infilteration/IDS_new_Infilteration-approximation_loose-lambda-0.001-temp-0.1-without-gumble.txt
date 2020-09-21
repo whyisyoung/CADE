@@ -1,0 +1,7 @@
+approximation_loose perturbed distance  avg: 6.183, std: 3.358
+================================================================================
+approximation_loose success idx: [ 68  69  70 171 172 175 177 180 181 182 183 184 347 368 369 372 378 383
+ 389 394 398 400 402 403 404 405 408 409 412 413 417 418 419 420 422 423
+ 426 427]
+
+approximation_loose success from drifting to in-dist: 38, ratio: 0.41%

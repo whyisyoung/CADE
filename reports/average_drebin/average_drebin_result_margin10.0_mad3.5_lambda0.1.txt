@@ -1,0 +1,25 @@
+family_idx,precision,recall,f1,insepct_cnt,normalized_inspect_cnt
+0,0.8215,1.0000,0.9020,1126.00,1.22
+1,0.9896,0.8576,0.9189,578.00,0.87
+2,0.9902,0.9664,0.9781,610.00,0.98
+3,0.9909,0.9617,0.9760,329.00,0.97
+4,0.9938,0.9788,0.9863,325.00,0.98
+5,0.9682,1.0000,0.9838,157.00,1.03
+6,0.9660,0.9660,0.9660,147.00,1.00
+7,0.9843,0.9470,0.9653,127.00,0.96
+============================================
+avg +/- std (final result in Table 3):
+precision: 96.31% +/- 0.05
+recall: 95.97% +/- 0.04
+f1: 95.95% +/- 0.03
+inspect_cnt: 424.88 +/- 317.44
+normalized inspect_cnt: 1.00 +/- 0.09
+============================================
+family 0:	 families detected as drifting: Counter({'7': 925, '2': 119, '1': 81, '6': 1})
+family 1:	 families detected as drifting: Counter({'7': 572, '2': 3, '6': 1, '1': 1, '0': 1})
+family 2:	 families detected as drifting: Counter({'7': 604, '2': 4, '6': 1, '0': 1})
+family 3:	 families detected as drifting: Counter({'7': 326, '0': 2, '2': 1})
+family 4:	 families detected as drifting: Counter({'7': 323, '6': 1, '3': 1})
+family 5:	 families detected as drifting: Counter({'7': 152, '3': 4, '2': 1})
+family 6:	 families detected as drifting: Counter({'7': 142, '3': 4, '6': 1})
+family 7:	 families detected as drifting: Counter({'7': 125, '2': 1, '3': 1})

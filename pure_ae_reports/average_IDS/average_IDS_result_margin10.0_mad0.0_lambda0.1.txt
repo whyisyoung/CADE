@@ -1,0 +1,15 @@
+family_idx,precision,recall,f1,insepct_cnt,normalized_inspect_cnt
+SSH,0.5320,0.9999,0.6945,22050.00,1.88
+Hulk,0.8285,0.9944,0.9039,52195.00,1.20
+Infilteration,0.4610,0.9887,0.6288,19814.00,2.14
+============================================
+avg +/- std (final result in Table 3):
+precision: 60.72% +/- 0.16
+recall: 99.43% +/- 0.00
+f1: 74.24% +/- 0.12
+inspect_cnt: 31353.00 +/- 14765.76
+normalized inspect_cnt: 1.74 +/- 0.40
+============================================
+family SSH:	 families detected as drifting: Counter({'3': 11731, '0': 9416, '2': 894, '1': 9})
+family Hulk:	 families detected as drifting: Counter({'3': 43244, '0': 7430, '2': 1081, '1': 440})
+family Infilteration:	 families detected as drifting: Counter({'0': 10119, '3': 9134, '1': 411, '2': 150})

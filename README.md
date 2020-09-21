@@ -58,7 +58,7 @@ The preprocessed Drebin and IDS2018 dataset can be found under the `data` folder
 
 ## 3. Usage
 
-There are a number of command line arguments to run our program. Take the `drebin_new_0` (FakeInstaller as the unseen family)  setting for example:
+There are a number of command line arguments to run our program:
 
 ```bash
 $ python main.py -h

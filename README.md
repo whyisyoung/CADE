@@ -2,7 +2,7 @@
 
 The repository contains the code for detecting and explaining a specific type of concept drift (i.e., previously unseen families) in security applications like malware attribution and network intrusion classification.
 
-Further details can be found in the paper "CADE: Detecting and Explaining Concept Drift Samples for Security Applications" by Limin Yang, Wenbo Guo, Qingying Hao, Arridhana Ciptadi, Ali Ahmadzadeh, Xinyu Xing, Gang Wang. Check out http://liminyang.web.illinois.edu for up-to-date information on the project.
+Further details can be found in the paper "CADE: Detecting and Explaining Concept Drift Samples for Security Applications" by Limin Yang, Wenbo Guo, Qingying Hao, Arridhana Ciptadi, Ali Ahmadzadeh, Xinyu Xing, Gang Wang. We also include supplemental materials in the repo (`USENIX_21_drifting_Supplementary_Materials.pdf`) due to page limit.   Check out http://liminyang.web.illinois.edu for up-to-date information on the project.
 
 ```
 ********************************************************************************************************

@@ -5,19 +5,19 @@ The repository contains the code for detecting and explaining a specific type of
 Further details can be found in the paper "CADE: Detecting and Explaining Concept Drift Samples for Security Applications" by Limin Yang, Wenbo Guo, Qingying Hao, Arridhana Ciptadi, Ali Ahmadzadeh, Xinyu Xing, Gang Wang. Check out http://liminyang.web.illinois.edu for up-to-date information on the project.
 
 ```
-**********************************************************************************
+********************************************************************************************************
 * Version: 1.0
 * Author:  Limin Yang, Wenbo Guo, Qingying Hao, Arridhana Ciptadi, Ali Ahmadzadeh, Xinyu Xing, Gang Wang
 * Update:  Sept. 20, 2020
 * Paper:   CADE: Detecting and Explaining Concept Drift Samples for Security Applications
-**********************************************************************************
+********************************************************************************************************
 ```
 
 
 
-## Installation
+## 1. Installation
 
-Before getting started we recommend setting up a Python 3.6.5 or 3.6.8 virtual environment (other Python 3.6 or above versions might also work but didn't tested).
+Before getting started we recommend setting up a Python 3.6.5 or 3.6.8 virtual environment (other Python 3.6 or above versions might also work but didn't test).
 
 * If you are using CPU-based tensorflow, install all required packages:
 
@@ -30,7 +30,8 @@ Before getting started we recommend setting up a Python 3.6.5 or 3.6.8 virtual e
 
   ```bash
   module load cuda-toolkit/9.0  # other versions might also work but didn't test
-  conda create -n cade-gpu python=3.6.8 # you may also try pyenv and virtualenv to create the virtual environment, here we use Anaconda
+  # you may also try pyenv and virtualenv to create the virtual environment, here we use Anaconda
+  conda create -n cade-gpu python=3.6.8
   conda activate cade-gpu
   pip install scipy==1.3.3
   pip install numpy==1.16.1
@@ -45,13 +46,17 @@ Before getting started we recommend setting up a Python 3.6.5 or 3.6.8 virtual e
 
 
 
-## Configuration
-
-The preprocessed Drebin and IDS2018 dataset  can be found under the `data` folder. If you prefer to modify the preprocessing step, you may download the original dataset here: https://www.sec.cs.tu-bs.de/~danarp/drebin/index.html and https://www.unb.ca/cic/datasets/ids-2018.html and fill out the configuration in `cade/config.py`.
 
 
+## 2. Configuration
 
-## Usage
+The preprocessed Drebin and IDS2018 dataset can be found under the `data` folder. If you prefer to modify the preprocessing step, you may download the original dataset here: https://www.sec.cs.tu-bs.de/~danarp/drebin/index.html and https://www.unb.ca/cic/datasets/ids-2018.html and fill out the configuration in `cade/config.py`.
+
+
+
+
+
+## 3. Usage
 
 There are a number of command line arguments to run our program. Take the `drebin_new_0` (FakeInstaller as the unseen family)  setting for example:
 
@@ -76,9 +81,11 @@ See `cade/utils.py` or run `python main.py -h` for detailed help. You may also c
 
 
 
-## Examples
 
-### Drift detection
+
+## 4. Examples
+
+### 4.1 Drift detection
 
 1. To get the detection performance of CADE on the Drebin dataset (iteratively choose one family from 8 families as the unseen family):
 
@@ -86,7 +93,8 @@ See `cade/utils.py` or run `python main.py -h` for detailed help. You may also c
    ./run_drebin_cade.sh
 
    # After the shell script finished running
-   python -u average_all_detection_results.py drebin 0   # 0 means using CADE, while 1 means using Vanilla AE
+   python -u average_all_detection_results.py drebin 0
+   # 0 means using CADE, while 1 means using Vanilla AE
    ```
 
 2. To get the detection performance of CADE on the IDS2018 dataset (iteratively choose one family from 3 families as the unseen family):
@@ -118,35 +126,40 @@ See `cade/utils.py` or run `python main.py -h` for detailed help. You may also c
 
 
 
-### Drift explanation
+### 4.2 Drift explanation
 
 1. CADE explaining drift samples on the Drebin-Fakedoc setting (i.e., drebin_new_7):
 
    ```bash
    ./run_cade_exp_drebin_fakedoc.sh
-   # It will generate reports/drebin_new_7/mask_distance_mm1_0.001.npz, which is already provided.
-   # This step is time-consuming and non-deterministic, so we include the explanation output for saving reproduction time and easier comparison.
+   # It will generate reports/drebin_new_7/mask_distance_mm1_0.001.npz,
+   # which is already provided.
+   # This step is time-consuming and non-deterministic,
+   # so we include the explanation output for saving reproduction time and easier comparison.
    ```
 
 2. CADE explaining drift samples on the IDS2018-Infiltration setting:
 
    ```bash
    ./run_cade_exp_ids_infiltration.sh
-   # It will generate reports/IDS_new_Infilteration/mask_distance_mm1_0.001.npz, which is already provided.
+   # It will generate reports/IDS_new_Infilteration/mask_distance_mm1_0.001.npz,
+   # which is already provided.
    ```
 
 3. Boundary-based explanation on the Drebin-Fakedoc setting:
 
    ```bash
    ./run_boundary_exp_drebin_fakedoc.sh
-   # It will generate reports/drebin_new_7/mask_approximation_loose_0.001.npz, which is already provided.
+   # It will generate reports/drebin_new_7/mask_approximation_loose_0.001.npz,
+   # which is already provided.
    ```
 
 4. Boundary-based explanation on the IDS2018-Infiltration setting:
 
    ```bash
    ./run_boundary_exp_ids_infiltration.sh
-   # It will generate reports/IDS_new_Infilteration/mask_approximation_loose_0.001.npz, which is already provided.
+   # It will generate reports/IDS_new_Infilteration/mask_approximation_loose_0.001.npz,
+   # which is already provided.
    ```
 
 5. Compare CADE with boundary-based explanation and random explanation (using distance as the evaluation metric)
@@ -165,35 +178,44 @@ See `cade/utils.py` or run `python main.py -h` for detailed help. You may also c
    python -u evaluate_explanation_by_distance.py drebin_new_7 approximation_loose 0.001 0 0.1
 
    # 4. To get gradient-based explanation distance
-   nohup python -u evaluate_explanation_by_distance.py drebin_new_7 gradient 0.001 0 0.1 > logs/nohup-drebin_new_7-gradient-exp.log &
+   nohup python -u evaluate_explanation_by_distance.py drebin_new_7 gradient 0.001 0 0.1 \
+   > logs/nohup-drebin_new_7-gradient-exp.log &
    ```
 
    2. IDS2018-Infiltration
 
    ```bash
    # 1. To get original distance and CADE distance
-   nohup python -u evaluate_explanation_by_distance.py IDS_new_Infilteration distance_mm1 0.001 1 0.1 > logs/nohup-IDS-distance-mm1-exp.log &
+   nohup python -u evaluate_explanation_by_distance.py IDS_new_Infilteration distance_mm1 \
+   0.001 1 0.1 > logs/nohup-IDS-distance-mm1-exp.log &
 
    # 2. To get random explanation distance
-   nohup python -u evaluate_explanation_by_distance.py IDS_new_Infilteration random 0.001 0 0.1 > logs/nohup-IDS-random-exp.log &
+   nohup python -u evaluate_explanation_by_distance.py IDS_new_Infilteration random \
+   0.001 0 0.1 > logs/nohup-IDS-random-exp.log &
    # since we randomly run 100 times, there might be minor difference on the output.
 
    # 3. To get boundary-based explanation distance
-   nohup python -u evaluate_explanation_by_distance.py IDS_new_Infilteration approximation_loose 0.001 0 0.1 > logs/nohup-IDS-boundary-exp.log &
+   nohup python -u evaluate_explanation_by_distance.py IDS_new_Infilteration \
+   approximation_loose 0.001 0 0.1 > logs/nohup-IDS-boundary-exp.log &
 
    # 4. To get gradient-based explanation distance
-   nohup python -u evaluate_explanation_by_distance.py IDS_new_Infilteration gradient 0.001 0 0.1 > logs/nohup-IDS-gradient-exp.log &
+   nohup python -u evaluate_explanation_by_distance.py IDS_new_Infilteration gradient \
+   0.001 0 0.1 > logs/nohup-IDS-gradient-exp.log &
    ```
 
 
 
-## Contact
+
+
+## 5. Contact
 
 If you have any questions, please contact Limin (liminy2@illinois.edu).
 
 
 
-## Licensing
+
+
+## 6. Licensing
 
 For ethical considerations, code and data is covered by a modified BSD 3-Clause License which restricts the use of the code to academic purposes and which specifically prohibits commercial applications.
 

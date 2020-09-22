@@ -277,7 +277,7 @@ class ContrastiveAE(object):
                     # print logs each xxx epoch
                     if epoch % display_interval == 0:
                         current_loss = np.mean(loss_batch)
-                        logging.debug(f'Epoch {epoch}: loss {current_loss} -- ' + \
+                        logging.info(f'Epoch {epoch}: loss {current_loss} -- ' + \
                                     f'contrastive {np.mean(contrastive_loss_batch)} -- ' + \
                                     f'ae {np.mean(ae_loss_batch)} -- ' + \
                                     f'pairs {np.mean(np.sum(np.mean(aux_batch)))} : ' + \

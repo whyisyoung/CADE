@@ -2,18 +2,17 @@
 
 The repository contains the code for detecting and explaining a specific type of concept drift (i.e., previously unseen families) in security applications like malware attribution and network intrusion classification.
 
-Further details can be found in the paper "CADE: Detecting and Explaining Concept Drift Samples for Security Applications" by Limin Yang, Wenbo Guo, Qingying Hao, Arridhana Ciptadi, Ali Ahmadzadeh, Xinyu Xing, Gang Wang. We also include supplemental materials in the repo (`USENIX_21_drifting_Supplementary_Materials.pdf`) due to page limit.   Check out http://liminyang.web.illinois.edu for up-to-date information on the project.
+Further details can be found in the paper "*CADE: Detecting and Explaining Concept Drift Samples for Security Applications*" by Limin Yang, Wenbo Guo, Qingying Hao, Arridhana Ciptadi, Ali Ahmadzadeh, Xinyu Xing, Gang Wang (USENIX Security 2021). We also include supplemental materials in the repo (`USENIX_21_drifting_Supplementary_Materials.pdf`) due to page limit.   Check out http://liminyang.web.illinois.edu for up-to-date information on the project.
 
+If you end up building on this research or code as part of a project or publication, please include a reference to the USENIX Security paper:
 ```
-********************************************************************************************************
-* Version: 1.0
-* Author:  Limin Yang, Wenbo Guo, Qingying Hao, Arridhana Ciptadi, Ali Ahmadzadeh, Xinyu Xing, Gang Wang
-* Update:  Sept. 20, 2020
-* Paper:   CADE: Detecting and Explaining Concept Drift Samples for Security Applications
-********************************************************************************************************
+@inproceedings{yang2021cade,
+    title = {CADE: Detecting and Explaining Concept Drift Samples for Security Applications},
+    author = {Limin Yang, Wenbo Guo, Qingying Hao, Arridhana Ciptadi, Ali Ahmadzadeh, Xinyu Xing, Gang Wang},
+    booktitle = {Proc. of USENIX Security},
+    year = {2021}
+}
 ```
-
-
 
 ## 1. Installation
 

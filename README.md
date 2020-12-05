@@ -8,7 +8,7 @@ If you end up building on this research or code as part of a project or publicat
 ```
 @inproceedings{yang2021cade,
     title = {CADE: Detecting and Explaining Concept Drift Samples for Security Applications},
-    author = {Limin Yang, Wenbo Guo, Qingying Hao, Arridhana Ciptadi, Ali Ahmadzadeh, Xinyu Xing, Gang Wang},
+    author = {Yang, Limin and Guo, Wenbo and Hao, Qingying and Ciptadi, Arridhana and Ahmadzadeh, Ali and Xing, Xinyu and Wang, Gang},
     booktitle = {Proc. of USENIX Security},
     year = {2021}
 }

@@ -1,7 +1,7 @@
 Feature Name			Description
-Dst Port[0]			(Categorical feature) High frequency port: appears more than 10,000 times
-Dst Port[1]			(Categorical feature) Medium frequency port: appears between 1,000 – 10,000 times
-Dst Port[2]			(Categorical feature) Low frequency port: appears less than 1,000 times
+Dst Port[0]			(Categorical feature) High frequency destination port: appears more than 10,000 times
+Dst Port[1]			(Categorical feature) Medium frequency destination port: appears between 1,000 – 10,000 times
+Dst Port[2]			(Categorical feature) Low frequency destination port: appears less than 1,000 times
 Protocal[0]			(Categorical feature) TCP
 Protocal[1]			(Categorical feature) UDP
 Protocal[2]			(Categorical feature) IPv6
